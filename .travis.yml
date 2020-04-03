@@ -14,7 +14,7 @@ before_install:
   - gcloud config set project simplek8 
   - gcloud config set compute/zone europe-west4-b
   - gcloud container clusters get-credentials simplel8s
-  - echo "$DOCKER_PASSWORD" | docker login -u '$DOCKER_USERNAME' --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t danarus/react-test -f ./client/Dockerfile.dev ./client
 
 script:
