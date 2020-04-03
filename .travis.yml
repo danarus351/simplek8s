@@ -12,7 +12,7 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project simplek8 
-  - gcloud config compute/zone europe-west4-b
+  - gcloud config set compute/zone europe-west4-b
   - gcloud container clusters get-credentials simplel8s
   - echo "$DOCKER_PASSWORD" | docker login -u '$DOCKER_USERNAME' --password-stdin
   - docker build -t danarus/react-test -f ./client/Dockerfile.dev ./client
