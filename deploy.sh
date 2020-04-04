@@ -1,6 +1,6 @@
 docker build -t danarus/multi_client:latest -t danarus/multi_client:$git_SHA -f ./client/Dockerfile ./client
 docker build -t danarus/multi_server:latest -t danarus/multi_server:$git_SHA -f ./server/Dockerfile ./server
-docker build -t danarus/multi_worker:latest -t danarus/multi_worker:$git_SHA -f ./multi_worker/Dockerfile ./docker 
+docker build -t danarus/multi_worker:latest -t danarus/multi_worker:$git_SHA -f ./multi_worker/Dockerfile ./client
 
 docker push danarus/multi_client:latest
 docker push danarus/multi_server:latest
